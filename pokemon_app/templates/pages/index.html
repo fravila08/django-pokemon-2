@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Pokemon</title>
+    </head>
+    <body>
+        <header>
+            <h1>Choose your team</h1>
+        </header>
+        <main>
+            <div style="display:flex; justify-content:space-evenly; width:100vw;">
+                {% comment %} <button>Fire</button>
+                <button>Water</button>
+                <button>Electric</button>
+                <button>Ground</button>
+                <button>Grass</button>
+                <button>Psychic</button> {% endcomment %}
+                {% for type in types %}
+                    <button><a href="pokemon/{{type}}">  {{type}} </a></button>
+                {% endfor %}
+            </div>
+            <button><a href="items"> Items</a></button>
+        </main>
+    </body>
+</html>

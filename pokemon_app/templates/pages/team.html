@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Pokemon</title>
+    </head>
+    <body>
+        <header>
+            <h1>{{info}}</h1>
+        </header>
+        <main>
+            <div style="display:flex; justify-content:space-evenly; width:100vw;">
+                {% for pokemon in myPokemon%}
+                    <div style="display:flex; flex-direction:column; align-items:center;">
+                        <img src="{{pokemon.img}}" />
+                        <label> {{pokemon.name}} </label>
+                    </div>
+                {% endfor %}
+            </div>
+        </main>
+        <footer>
+            <a href="{% url 'home'%}"> HOME</a>
+        </footer>
+    </body>
+</html>
